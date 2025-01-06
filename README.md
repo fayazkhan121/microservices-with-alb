@@ -1,7 +1,7 @@
-**Microservices with ALB - Terraform Infrastructure
-**
-**Overview
-**
+Microservices with ALB - Terraform Infrastructure
+
+Overview
+
 This repository provides a Terraform-based infrastructure-as-code (IaC) solution to deploy a microservices architecture using AWS services. The architecture includes:
 
 Application Load Balancer (ALB) with Path-Based Routing
@@ -18,12 +18,12 @@ Secure VPC setup with public and private subnets
 
 Multiple environments (Production, Development, QA, Staging)
 
-**Architecture Diagram
-**
+Architecture Diagram
 
 
-**Components
-**
+
+Components
+
 VPC: Secure network with public and private subnets.
 
 ALB: Manages traffic routing based on paths to different services.
@@ -38,8 +38,8 @@ Aurora and DynamoDB: Databases for different services.
 
 Security Groups: Provides firewall-level security.
 
-**Directory Structure
-**
+Directory Structure
+
 ├── terraform/
 │   ├── providers.tf          # AWS provider configuration
 │   ├── vpc.tf                # VPC and subnet definitions
@@ -58,8 +58,8 @@ Security Groups: Provides firewall-level security.
 │   ├── versions.tf           # Version constraints
 └── README.md
 
-**Prerequisites
-**
+Prerequisites
+
 Terraform: Install Terraform CLI from Terraform Download.
 
 AWS CLI: Install AWS CLI and configure credentials.
@@ -82,10 +82,10 @@ Staging
 
 Use terraform.tfvars to define variables specific to each environment.
 
-**Deployment Steps
-**
-**Clone Repository
-**
+Deployment Steps
+
+Clone Repository
+
 git clone https://github.com/yourusername/repository-name.git
 cd repository-name/terraform
 
@@ -105,14 +105,14 @@ Destroy Infrastructure (if required)
 
 terraform destroy -var-file="terraform.tfvars"
 
-**Outputs
-**
+Outputs
+
 After successful deployment, the ALB DNS name will be provided as output:
 
-**Outputs:
-**  alb_dns_name = "example-alb-12345678.us-east-1.elb.amazonaws.com"
+Outputs:
+  alb_dns_name = "example-alb-12345678.us-east-1.elb.amazonaws.com"
 
-**Security Measures
+Security Measures
 
 Security groups enforce least privilege principles.
 
@@ -128,4 +128,4 @@ Monitoring & Logging
 
 AWS CloudWatch is used for monitoring logs and performance metrics.
 
-Alarms can be configured to notify admins of any failures.**
+Alarms can be configured to notify admins of any failures.
